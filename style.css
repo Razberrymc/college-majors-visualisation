@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@600&family=Raleway:wght@300&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kosugi&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Domine:400,700&display=swap');
-
+*/
 body {
     background-color: rgb(245, 244, 241);
     overflow-x: hidden;
@@ -17,13 +18,13 @@ body {
 }
 
 .categoryLegend {
-    font-family: "Domine";
+    font-family: "Blinker";
 }
 
 .step {
     margin-bottom: 100px;
     height: 700px;
-    font-family: "Domine";
+    font-family: "Raleway";
     font-weight: 400;
     line-height: 1.4em;
     text-align: justify;
@@ -33,6 +34,7 @@ body {
 }
 
 h1, h2 {
+    font-family: "Blinker";
     font-weight: 700;
     text-align: right;
     line-height: 32px;
@@ -43,7 +45,7 @@ h1 {
 }
 
 strong {
-    color: rgb(245, 155, 155);
+    color: rgb(86, 174, 255);
 }
 
 #graphic {
@@ -76,7 +78,7 @@ strong {
     box-shadow: -3px 3px 15px #939393;
     color: white;
     padding: 6px;
-    font-family: "Merriweather";
+    font-family: "Raleway";
     font-size: 1.1em;
     max-width: 400px;
     z-index: 100;
@@ -95,7 +97,7 @@ svg circle:hover{
 }
 
 a {
-    color: rgb(221, 0, 255);
+    color: rgb(117, 112, 112);
     text-decoration: none;
 }
 
