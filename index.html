@@ -6,21 +6,13 @@
     <script src = 'd3.js'></script>
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js'></script>
 
-    <meta property='og:title' content='Best College Majors'/>
-    <meta property='og:image' content='https://github.com/cuthchow/college-majors-visualisation/blob/master/preview.png'/>
-    <meta property='og:description' content='This interactive, scrollable data visualisation will take you on a journey through all of the different college majors in the United States, and compare how they stack up in terms of median graduate salary, gender ratios, employability, and other factors. '/>
-    <meta property='og:url' content='https://cuthchow.github.io/college-majors-visualisation/'/>
-
 
     <title>ipsum: Understanding You</title>
 </head>
 
 
 <body>
-    <!-- <div id="info">
-        a
-    </div> -->
-    <img src="https://github.com/cuthchow/college-majors-visualisation/blob/master/preview.png" alt="">
+
     <div id="tooltip"></div>
     <div id="graphic">
         <div id="sections">
@@ -43,68 +35,92 @@
 
             </section>
             <section class="step">
+                <h1>Your Days at a Glance</h1>
                 <p>
-                Here, we have clustered the majors based on the broader category, of which there are 16 in total. The size
-                of the bubbles represent the median salary of graduates from the major.
-
-                When sorted like this, it's quite clear that engineering majors of all kinds have generally above-average median salaries. <br><br>
-                On the other end, it appears that majors in the field of psychology on average have the lowest graduate salaries. <br>
-                </p>
-                <svg id = 'legend' width = '400px' height = '500px'></svg>
-            </section>
-            <section class = 'step'>
-                <svg id = 'legend2' width = '400px' height = '450px'></svg><br><br>
-                Bear in mind that some of these figures may suffer from small sample sizes. If you hover over a bubble, you can see additional information,
-                including the number of students enrolled in a given major. Salary figures from degrees with lower
-                enrolment may be less accurate due to the smaller pool of student respondents
-            </section>
-            <section class="step">
-                <br><br><br><br><br><br>
-                <p>
-                    If we rearrange all the data points into a histogram format, the salary potential of engineering majors becomes
-                even more stark, as almost all the points on the right of the graph are colored yellow, for engineering. As for all the
-                other majors, they follow a fairly diverse yet tightly spaced distribution, with the modal class being
-                salaries between $34,000 and $36,000.
-                </p>
-
-            </section>
-            <section class="step">
-
-                <p>
-                <h2>Does Gender Influence Chosen Majors?</h2>
-                Now what if we took those same categories, but coloured them based on the proportion of the students which are male or female?
-                In this chart, blue represents majors with > 60% male, and red represents > 60% female, and the grey bubbles represent the more gender
-                balanced courses.
-                <br><br>(Hover over the labels if you've forgotten the category)<br><br>
-
-                What is striking about this graphic is that almost every category grouping of majors are either decidedly more female-weighted or male-weighted,
-                with the exception of perhaps the business and physical sciences majors.
-                </p>
-
-            </section>
-            <section class="step">
-                When we plot the % of students in a major being female against the median salary of students in the major, a fairly clear trend emerges.
-                It appears that majors with a higher proportion of male students also produce students with higher median wages. <br><br> In fact, a linear model
-                would predict that for every added percentage of female students in a given major, the median annual salary drops by $306 USD.
-            </section>
-            <section class="step">
-                So we've seen the most 'profitable' majors, as well as the ones with the most uneven gender distributions. But what are students
-                actually enrolling in the most frequently? What can enrolment numbers tell us about actual interest in each major? This chart has the bubbles
-                sized based on the number of students enrolled in each major, and coloured by category.
-                <svg id = 'legend3' width = '400px' height = '350px'></svg>
-                Psychology is the clear leader in this regard, with over 390,000 students enrolled. Business related topics such as general business, business management,
-                accounting and finance are all also heavily enrolled.
-            </section>
-            <section class="step">
-                <h1>The End</h1>
-                <p>
-                    Hopefully, this has helped you in deciding what major you hope to study. If you want to take a deeper look into the data for yourself, you can download
-                    all the csv files <a href = 'https://www.kaggle.com/fivethirtyeight/fivethirtyeight-college-majors-dataset'>here</a>.
+                    Cyan signifies days with a confidence level of 5.
                     <br><br>
-                    Special thanks to Jim Vallandingham for his article on <a href = 'https://vallandingham.me/scroller.html'>creating scrolling visualisations using D3.js</a>. All
-                    of the code associated with this project can be found on its <a href = 'https://github.com/cuthchow/college-majors-visualisation'>Github page</a>.
+                    Yellow signifies days with a confidence level of 4.
                     <br><br>
-                    I've also produced a full write-up of how I made this <a href = 'https://towardsdatascience.com/how-i-created-an-interactive-scrolling-visualisation-with-d3-js-and-how-you-can-too-e116372e2c73'>over at my blog</a>.
+                    Light red signifies days with a confidence level of 3.
+                    <br><br>
+                    Magenta signifies days with a confidence level of 2.
+                    <br><br>
+                    Pink signifies days with a confidence level of 1.
+                    <br><br>
+                </p>
+                <span></span><span></span><span></span>
+            </section>
+            <section class="step">
+              <h2>Ready to answer a few questions?</h2>
+                <p>
+                  Let's get started. How was your day today?<br><br>
+
+                  <label>How many hours of sleep did you get?
+                    <input type="text" name="sleep" required>
+                  </label> <br><br>
+
+                  <label>Describe the weather for majority of the day.
+                    <input type="text" name="weather" required>
+                  </label> <br><br>
+
+                  <label>What city are you in today?
+                    <input type="text" name="city" required>
+                  </label> <br><br>
+
+                  <label>What country are you in today?
+                    <input type="text" name="country" required>
+                  </label> <br><br>
+
+                  <label>Did you go outside today?
+                    <input type="text" name="outside" required>
+                  </label> <br><br>
+
+                  <label>How long did you listen to music today?
+                    <input type="text" name="music" required>
+                  </label> <br><br>
+
+                  <label>How long did you exercise today?
+                    <input type="text" name="exercise" required>
+                  </label> <br><br>
+
+                  <label>Level of Confidence
+                    <input type="text" name="Confidence" required>
+                  </label> <br><br>
+
+                  <label>Level of Depression
+                    <input type="text" name="Depression" required>
+                  </label> <br><br>
+
+                  <label>Level of Anxiety
+                    <input type="text" name="Anxiety" required>
+                  </label> <br><br>
+
+                  <label>Level of Happiness
+                    <input type="text" name="Happiness" required>
+                  </label> <br><br>
+
+                  <label>Level of Productivity
+                    <input type="text" name="Productivity" required>
+                  </label> <br><br>
+
+                  <label>How many meals/snacks have you eaten today?
+                    <input type="text" name="meals" required>
+                  </label> <br><br>
+
+                  <label>How many caffeniated drinks have you consumed today?
+                    <input type="text" name="drinks" required>
+                  </label> <br><br>
+
+                  <button>Submit</button>
+
+                </p>
+
+            </section>
+<br><br>
+            <section class="step">
+                <h1>Have a great night!</h1>
+                <p>
+                    Remember to wind down away from your screen to get a restful night's sleep.
                 </p>
                 <span></span><span></span><span></span>
             </section>
